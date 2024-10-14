@@ -1,3 +1,3 @@
 # the last step check connection between Ansible CS and Windows host
 # execute this command in ansible cs
-ansible windows -m win_ping
+ansible my_windows -m win_ping
