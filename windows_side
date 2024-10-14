@@ -1,1 +1,10 @@
-test
+# Run as Administrator on the Windows machine
+winrm quickconfig
+winrm set winrm/config/service/auth '@{Basic="true"}'
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="300"}'
+winrm set winrm/config/winrs '@{MaxShellPerUser="50"}'
+winrm set winrm/config/winrs '@{MaxConcurrentUsers="50"}'
+
+# Create listener for any IP address
+winrm create winrm/config/Listener?Address=*+Transport=HTTP
