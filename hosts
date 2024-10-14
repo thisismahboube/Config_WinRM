@@ -1,9 +1,9 @@
 # this file is in /etc/ansible/
 # this is name of windows host group, you can select any name
-[windows] 
+[my_windows] 
 192.168.28.6
 
-[windows:vars]
+[my_windows:vars]
 ansible_user=Administator
 ansible_password=YOUR_PASSWORD
 ansible_connection=winrm
